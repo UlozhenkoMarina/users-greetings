@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body style="background-color: #FDF2E9;">
+<div class="container">
+	  <a href="/state" class="btn btn-info" role="button" style="margin-top:5%; margin-left:35%;">Перелік вже використаних імен</a>
+    {% if message %}
+        <p style="margin-top:7%; margin-left:35%;">{{ message }}</p>
+    {% endif %}
+
+    <form action="" method="post" style="margin-top:10%; margin-left:15%;">
+		<div class="form-group">
+	    <label for="userName">Name</label>
+	    <input type="text" class="form-control" name="userName">
+	</div>
+	<div class="form-group">
+	    <label for="userSurname">Surname</label>
+	    <input type="text"  class="form-control" name="userSurname">
+	</div>
+		<div class="form-group">
+	    <label for="userEmail">Email</label>
+	    <input type="text" class="form-control" name="userEmail">
+	</div>
+		<div class="form-group">
+	    <input type="submit" class="btn btn-success" name="Привітатись" style="margin-left:40%;">
+		</div>
+    </form>
+</div>
+</body>
+</html>

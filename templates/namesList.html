@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<body style="background-color: #FDF2E9;">
+<p style="margin-left:35%; margin-top:2%;">Вже використані імена:</p>
+<div class="container">
+<div class="btn-group btn-group-justified">
+  <a href="/sortup" class="btn btn-primary">Сортувати за іменем в алфавітному порядку</a>
+  <a href="/sortdown" class="btn btn-primary">Сортувати за іменем в інверсному порядку</a>
+    <a href="/" class="btn btn-primary">На головну сторінку</a>
+</div>  <textarea cols="100" rows="50" style="overflow:scroll; margin-top:5%; margin-left:15%;">
+		{% for user in users %}
+           {{ user.name}}  {{user.surname}} ( {{user.email}} )
+	       ---------------------------------------------------------------------------------------
+  {% endfor %}
+  </textarea>
+</div>
+</body>
+</html>
